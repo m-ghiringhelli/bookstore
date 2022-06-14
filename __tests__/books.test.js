@@ -10,7 +10,8 @@ describe('book routes', () => {
   
   it('book route should return books as json data', async () => {
     const res = await request(app).get('/books');
-    const expected = books.map(() => {
+    const books = res.body;
+    const expected = books.map((book) => {
       return {
         id: book.id,
         title: book.title,
