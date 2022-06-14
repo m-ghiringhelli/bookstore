@@ -8,7 +8,7 @@ describe('author routes', () => {
     return setup(pool);
   });
   
-  it('authors route should return authors as json data', async () => {
+  it.skip('authors route should return authors as json data', async () => {
     const res = await request(app).get('/authors');
     const authors = res.body;
     const expected = authors.map((author) => {
@@ -18,6 +18,28 @@ describe('author routes', () => {
       };
     });
     expect(res.body).toEqual(expected);
+  });
+
+  it('should get a book by id and display book and author data', async () => {
+    const res = await request(app).get('authors/:id');
+    const peterStraub = {
+      name: 'Peter Straub',
+      dob: '1943-03-02',
+      pob: 'Milwaukee, WI',
+      books: [
+        {
+          id: 1,
+          title: 'The Talisman',
+          released: 1984
+        },
+        {
+          id: 4,
+          title: 'Koko',
+          released: 1988
+        }
+      ]
+    };
+    expect(res.body).toEqual(peterStraub);
   });
 
   afterAll(() => {

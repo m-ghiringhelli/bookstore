@@ -23,7 +23,6 @@ describe('book routes', () => {
   
   it.skip('should get a book by id and display book info including authors', async () => {
     const res = await request(app).get('/books/1');
-    console.log(res.body);
     const talisman = {
       id: '1',
       title: 'The Talisman',

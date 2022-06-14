@@ -10,8 +10,8 @@
   - get book by id route
   - adjust model
   - get author test
-- get author route
-- author model
+  - get author route
+  - author model
 - get author id test
 - get author id route
 - adjust model
