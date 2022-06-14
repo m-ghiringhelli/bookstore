@@ -1,6 +1,6 @@
 # PLAN
 
-- get book test
+  - get book test
 - seed books
 - seed authors
 - join books / authors
