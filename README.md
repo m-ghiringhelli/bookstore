@@ -12,8 +12,8 @@
   - get author test
   - get author route
   - author model
-- get author id test
-- get author id route
+  - get author id test
+  - get author id route
 - adjust model
 - post book test
 - post book route

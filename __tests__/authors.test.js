@@ -21,7 +21,8 @@ describe('author routes', () => {
   });
 
   it('should get an author by id and display author and books data', async () => {
-    const res = await request(app).get('authors/:id');
+    const res = await request(app).get('/authors/2');
+    console.log('res.body', res.body);
     const peterStraub = {
       name: 'Peter Straub',
       dob: '1943-03-02',

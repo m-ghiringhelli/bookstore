@@ -19,7 +19,7 @@ INSERT INTO books (title, released) VALUES
 CREATE table authors (
   id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   name VARCHAR NOT NULL,
-  dob DATE,
+  dob VARCHAR,
   pob VARCHAR
 );
 
