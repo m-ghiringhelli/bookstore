@@ -47,7 +47,7 @@ describe('book routes', () => {
       title: 'The Stand',
       released: 1978
     });
-    const res = await (await request(app).post('/books')).send(book);
+    const res = await request(app).post('/books').send(book);
     expect(res.body.title).toEqual(book.title);
     expect(res.body.released).toEqual(book.released);
 
