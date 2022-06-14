@@ -2,8 +2,8 @@
 
   - get book test
   - seed books
-- get books route
-- books model
+  - get books route
+  - books model
 - seed authors
 - join books / authors
 - get book by id test

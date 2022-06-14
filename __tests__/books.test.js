@@ -24,4 +24,4 @@ describe('book routes', () => {
   afterAll(() => {
     pool.end();
   });
-})
+});
