@@ -9,7 +9,7 @@ describe('author routes', () => {
     return setup(pool);
   });
   
-  it.skip('authors route should return authors as json data', async () => {
+  it('authors route should return authors as json data', async () => {
     const res = await request(app).get('/authors');
     const authors = res.body;
     const expected = authors.map((author) => {
@@ -21,7 +21,7 @@ describe('author routes', () => {
     expect(res.body).toEqual(expected);
   });
 
-  it.skip('should get an author by id and display author and books data', async () => {
+  it('should get an author by id and display author and books data', async () => {
     const res = await request(app).get('/authors/2');
     const peterStraub = {
       name: 'Peter Straub',

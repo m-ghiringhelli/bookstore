@@ -9,7 +9,7 @@ describe('book routes', () => {
     return setup(pool);
   });
   
-  it.skip('book route should return books as json data', async () => {
+  it('book route should return books as json data', async () => {
     const res = await request(app).get('/books');
     const books = res.body;
     const expected = books.map((book) => {
@@ -22,7 +22,7 @@ describe('book routes', () => {
     expect(res.body).toEqual(expected);
   });
   
-  it.skip('should get a book by id and display book info including authors', async () => {
+  it('should get a book by id and display book info including authors', async () => {
     const res = await request(app).get('/books/1');
     const talisman = {
       id: '1',
@@ -42,7 +42,7 @@ describe('book routes', () => {
     expect(res.body).toEqual(talisman);
   });
 
-  it.skip('should add a new book', async () => {
+  it('should add a new book', async () => {
     const book = new Book({
       title: 'The Stand',
       released: 1978
