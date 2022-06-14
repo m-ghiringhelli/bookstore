@@ -1,11 +1,11 @@
 # PLAN
 
   - get book test
-- seed books
+  - seed books
+- get books route
+- books model
 - seed authors
 - join books / authors
-- book route
-- book model
 - get book by id test
 - get book by id route
 - adjust model
