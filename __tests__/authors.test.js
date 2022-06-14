@@ -20,7 +20,7 @@ describe('author routes', () => {
     expect(res.body).toEqual(expected);
   });
 
-  it('should get a book by id and display book and author data', async () => {
+  it('should get an author by id and display author and books data', async () => {
     const res = await request(app).get('authors/:id');
     const peterStraub = {
       name: 'Peter Straub',
