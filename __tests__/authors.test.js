@@ -2,6 +2,7 @@ const pool = require('../lib/utils/pool');
 const setup = require('../data/setup');
 const request = require('supertest');
 const app = require('../lib/app');
+const { Author } = require('../lib/models/Author');
 
 describe('author routes', () => {
   beforeEach(() => {
@@ -40,6 +41,18 @@ describe('author routes', () => {
       ]
     };
     expect(res.body).toEqual(peterStraub);
+  });
+
+  it('should add a new author', async () => {
+    const author = new Author({
+      name: 'Kurt Vonnegut',
+      dob: '1922-11-11',
+      pob: 'Indianapolis, IN'
+    });
+    const res = await request(app).post('/authors').send(author);
+    expect(res.body.name).toEqual(author.name);
+    expect(res.body.dob).toEqual(author.dob);
+    expect(res.body.pob).toEqual(author.pob);
   });
 
   afterAll(() => {
