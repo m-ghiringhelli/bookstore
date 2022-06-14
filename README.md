@@ -6,7 +6,7 @@
   - books model
   - seed authors
   - join books / authors
-- get book by id test
+  - get book by id test
 - get book by id route
 - adjust model
 - get author test
