@@ -9,7 +9,7 @@
   - get book by id test
   - get book by id route
   - adjust model
-- get author test
+  - get author test
 - get author route
 - author model
 - get author id test
