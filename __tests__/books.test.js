@@ -8,7 +8,7 @@ describe('book routes', () => {
     return setup(pool);
   });
   
-  it('book route should return books as json data', async () => {
+  it.skip('book route should return books as json data', async () => {
     const res = await request(app).get('/books');
     const books = res.body;
     const expected = books.map((book) => {
@@ -23,7 +23,9 @@ describe('book routes', () => {
   
   it('should get a book by id and display book info including authors', async () => {
     const res = await request(app).get('/books/1');
+    console.log(res.body);
     const talisman = {
+      id: '1',
       title: 'The Talisman',
       released: 1984,
       authors: [
