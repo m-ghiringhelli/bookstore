@@ -7,8 +7,8 @@
   - seed authors
   - join books / authors
   - get book by id test
-- get book by id route
-- adjust model
+  - get book by id route
+  - adjust model
 - get author test
 - get author route
 - author model

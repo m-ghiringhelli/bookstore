@@ -8,7 +8,7 @@ describe('book routes', () => {
     return setup(pool);
   });
   
-  it('book route should return books as json data', async () => {
+  it.skip('book route should return books as json data', async () => {
     const res = await request(app).get('/books');
     const books = res.body;
     const expected = books.map((book) => {
