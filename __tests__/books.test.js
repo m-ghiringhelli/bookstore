@@ -20,6 +20,25 @@ describe('book routes', () => {
     });
     expect(res.body).toEqual(expected);
   });
+  
+  it('should get a book by id and display book info including authors', async () => {
+    const res = await request(app).get('/books/1');
+    const talisman = {
+      title: 'The Talisman',
+      released: 1984,
+      authors: [
+        { 
+          id: 1,
+          name: 'Stephen King'
+        },
+        {
+          id: 2,
+          name: 'Peter Straub'
+        }
+      ]
+    };
+    expect(res.body).toEqual(talisman);
+  });
 
   afterAll(() => {
     pool.end();
