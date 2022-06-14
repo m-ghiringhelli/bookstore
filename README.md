@@ -4,7 +4,7 @@
   - seed books
   - get books route
   - books model
-- seed authors
+  - seed authors
 - join books / authors
 - get book by id test
 - get book by id route
