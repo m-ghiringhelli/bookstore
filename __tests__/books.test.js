@@ -2,6 +2,7 @@ const pool = require('../lib/utils/pool');
 const setup = require('../data/setup');
 const request = require('supertest');
 const app = require('../lib/app');
+const { Book } = require('../lib/models/Book');
 
 describe('book routes', () => {
   beforeEach(() => {
@@ -39,6 +40,17 @@ describe('book routes', () => {
       ]
     };
     expect(res.body).toEqual(talisman);
+  });
+
+  it('should add a new book', async () => {
+    const book = new Book({
+      title: 'The Stand',
+      released: 1978
+    });
+    const res = await (await request(app).post('/books')).send(book);
+    expect(res.body.title).toEqual(book.title);
+    expect(res.body.released).toEqual(book.released);
+
   });
 
   afterAll(() => {
